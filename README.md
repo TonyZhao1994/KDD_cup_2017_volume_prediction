@@ -33,7 +33,7 @@ as features.
 
 6.Encode and Disperse irrelevant features with onehot coding
 
-###Compress the training ground truth with log function
+### Compress the training ground truth with log function
 
 As the objective function is MAPE (Mean Average Percentage Error), the final score will be more sensitive to low volume time periods. Comparing with high volume time periods, the same error with low
 volume will lead to larger MAPE. So we use log funciton to  realize nonlinear transformation since our actual objective function is MSE.
