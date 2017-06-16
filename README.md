@@ -1,7 +1,7 @@
 # KDD_cup_2017_volume_prediction
 
 ## Task period
-2017.04 ¡ª¡ª 2017.06
+2017.04 to 2017.06
 
 ## Task background and requirement
 
@@ -21,19 +21,19 @@ as features.
 
 ### Feature engineering
 
-#### Take last 2 hour volumes as input features, i.e. 6 dimensions
+1.Take last 2 hour volumes as input features, i.e. 6 dimensions
 
-#### Delete all filled data because of effects of inaccuracy
+2.Delete all filled data because of effects of inaccuracy
 
-#### Add specific time dimension: such as month, week, weekday, hour and which part of 72 time windows
+3.Add specific time dimension: such as month, week, weekday, hour and which part of 72 time windows
 
-#### Add weather information, though I don't use it finally
+4.Add weather information, though I don't use it finally
 
-#### Add another dimension of judging whether today is holiday
+5.Add another dimension of judging whether today is holiday
 
-#### Encode and Disperse irrelevant features with onehot coding
+6.Encode and Disperse irrelevant features with onehot coding
 
-### Compress the training ground truth with log function
+###Compress the training ground truth with log function
 
 As the objective function is MAPE (Mean Average Percentage Error), the final score will be more sensitive to low volume time periods. Comparing with high volume time periods, the same error with low
 volume will lead to larger MAPE. So we use log funciton to  realize nonlinear transformation since our actual objective function is MSE.
